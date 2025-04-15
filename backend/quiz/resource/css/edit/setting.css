@@ -1,0 +1,159 @@
+.area-stg-wrp {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 1em 1em;
+    background-color: #fff;
+    border-radius: 0.5em;
+    margin: 0;
+    box-shadow: 0 8px 12px rgb(0 0 0 / 15%);
+}
+
+.area-stg-wrp .area-stg-left {
+    margin-top: 1em;
+    width: 60%;
+    border-right: 1px solid rgba(0, 0, 0, .1);
+}
+
+.area-stg-wrp .area-stg-right {
+    margin: 1em 0 0 1em;
+    width: 40%;
+}
+
+.area-stg-wrp .area-stg-right .area-stg-r-item input,
+.area-stg-wrp .area-stg-left input {
+    font-size: 1.3em;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    min-width: none;
+}
+
+.area-stg-wrp .area-stg-right .area-stg-r-item input {
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+
+    padding-left: 10px;
+    border: 1px solid #dbdada;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.area-stg-wrp .area-stg-right input.btn {
+    margin-top: 1em;
+    cursor: auto;
+    font-weight: normal;
+    border: none;
+    background: #d13980;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    background-color: #EF7C7C;
+    width: 100%;
+}
+
+.area-stg-wrp .area-stg-right input.btn::placeholder {
+    color: #d8dce5;
+}
+
+.area-stg-wrp .area-stg-left input {
+    border: 1px solid transparent;
+}
+
+.area-stg-wrp .area-stg-left input:hover {
+    border: 1px solid #c5b7b7;
+}
+
+.area-stg-wrp .area-stg-left input {
+    margin-top: 0.5em;
+    width: 95%;
+}
+
+.area-stg-wrp .area-stg-right .area-stg-r-item {
+    padding: 4px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.area-stg-r-item .action-drag {
+    opacity: 0;
+    cursor: grab;
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.area-stg-r-item .action-drag:hover {
+    background-color: rgba(196, 196, 196, 0.1);
+}
+
+.area-stg-r-item:hover .action-drag {
+    opacity: 1;
+}
+
+.area-stg-r-item .action-drag::after {
+    content: '';
+    display: block;
+    background-image: url('../../img/svg/drag_and_drop.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    height: 1em;
+    width: 1em;
+}
+
+.area-stg-r-item .action-trash {
+    opacity: 0;
+    cursor: pointer;
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    border-radius: 4px;
+
+    margin-right: 0.35rem;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area-stg-r-item .action-trash::after {
+    content: '';
+    display: block;
+    background-image: url('../../img/svg/trash.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.3em 1.3em;
+    height: 1.3em;
+    width: 1.3em;
+}
+
+.area-stg-r-item .action-trash:hover {
+    background-color: rgba(209, 57, 128, 0.1);
+}
+
+.area-stg-r-item:hover .action-trash {
+    opacity: 1;
+}

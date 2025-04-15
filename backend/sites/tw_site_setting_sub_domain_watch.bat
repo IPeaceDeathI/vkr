@@ -1,0 +1,1 @@
+npx tailwindcss -c ./tw_site_setting_sub_domain.config.js -i ./resource/css/setting/site/tw_input_site_setting_sub_domain.css -o ./resource/css/setting/site/tw_output_site_setting_sub_domain.css --minify --watch

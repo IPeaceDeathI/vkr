@@ -1,0 +1,569 @@
+@import "@/shared/constants/index.scss";
+// СЮДА ПИХАТЬ ТОЛЬКО СТИЛИ РЕДАКТОРА, не будет подключаться у клиента
+//Common
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.menu-container {
+    height: $menu-container-height;
+    background-color: #16151c;
+}
+* {
+    touch-action: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+input,
+textarea {
+    touch-action: auto !important;
+    -webkit-user-select: auto !important;
+    -khtml-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    user-select: auto !important;
+}
+img {
+    pointer-events: none;
+}
+html {
+    overflow: hidden !important;
+    --redactor-line-spacing: 12px;
+}
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+//util
+
+.disabled-dom {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+// constructor
+.main-block-area-container {
+    --100vh: calc(100vh - 80px);
+    --document-top: 80px;
+    height: var(--100vh);
+    background-color: #f5f5f5;
+}
+.main-block-area {
+    width: 100%;
+}
+.viewport-is-mobile {
+    --100vw: #{$mobileViewPortWidth};
+}
+.empty-block-area-container {
+    @include centering-container;
+    height: $editor-container-height;
+}
+
+.container-grid ~ .block-area {
+    opacity: 0.7;
+}
+.block-container {
+    &:hover .item-header-divider {
+        visibility: visible;
+    }
+}
+.block-area {
+    --pointer-events: auto;
+}
+
+.zone:hover {
+    @include shadow-border;
+    &:has(.hide-controls) {
+        & {
+            box-shadow: none !important;
+        }
+        .noks-zone-toolbar {
+            display: none !important;
+        }
+    }
+    &:has(.item-layout.select) {
+        & {
+            @include shadow-border-opacity;
+        }
+        .noks-zone-toolbar {
+            opacity: 0.2;
+        }
+    }
+}
+.cards-wrapper,
+.columns-wrapper {
+    &.show-landing-strip {
+        @include shadow-border;
+        background-color: rgba(0, 0, 0, 0.11);
+    }
+}
+.smth-is-drag {
+    & .noks-zone-toolbar,
+    .add-item-btn {
+        opacity: 0 !important;
+    }
+    & .zone,
+    .item-layout {
+        box-shadow: none !important;
+    }
+    & .item-controls,
+    .noks-controls {
+        visibility: hidden !important;
+    }
+}
+.items-list {
+    &.show-landing-strip {
+        @include shadow-border;
+    }
+}
+
+.block-editor-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    z-index: $block-editor-controls-z-index;
+    .viewport-is-mobile & {
+        transform: translateX(110%);
+    }
+    &.menu-is-open {
+        opacity: 1;
+    }
+}
+.viewport-is-mobile {
+    .block-c {
+        &[data-noks-element-visibility="mobile"],
+        &[data-noks-element-visibility="all"] {
+            opacity: 1 !important;
+            &::after {
+                display: none;
+            }
+        }
+        &[data-noks-element-visibility="pc"],
+        &[data-noks-element-visibility="hidden"] {
+            display: block !important;
+            opacity: 0.4 !important;
+            &::after {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                width: 20%;
+                height: 20%;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2,5.27L3.28,4L20,20.72L18.73,22L15.65,18.92C14.5,19.3 13.28,19.5 12,19.5C7,19.5 2.73,16.39 1,12C1.69,10.24 2.79,8.69 4.19,7.46L2,5.27M12,9A3,3 0 0,1 15,12C15,12.35 14.94,12.69 14.83,13L11,9.17C11.31,9.06 11.65,9 12,9M12,4.5C17,4.5 21.27,7.61 23,12C22.18,14.08 20.79,15.88 19,17.19L17.58,15.76C18.94,14.82 20.06,13.54 20.82,12C19.17,8.64 15.76,6.5 12,6.5C10.91,6.5 9.84,6.68 8.84,7L7.3,5.47C8.74,4.85 10.33,4.5 12,4.5M3.18,12C4.83,15.36 8.24,17.5 12,17.5C12.69,17.5 13.37,17.43 14,17.29L11.72,15C10.29,14.85 9.15,13.71 9,12.28L5.6,8.87C4.61,9.72 3.78,10.78 3.18,12Z' /%3E%3C/svg%3E");
+                background-size: contain;
+                content: "";
+                background-position: center;
+                z-index: 100000000;
+            }
+        }
+    }
+}
+.block-c {
+    &[data-noks-element-visibility="pc"],
+    &[data-noks-element-visibility="all"] {
+        opacity: 1 !important;
+        &::after {
+            display: none;
+        }
+    }
+    &[data-noks-element-visibility="mobile"],
+    &[data-noks-element-visibility="hidden"] {
+        display: block !important;
+        opacity: 0.4;
+        &::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 20%;
+            height: 20%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2,5.27L3.28,4L20,20.72L18.73,22L15.65,18.92C14.5,19.3 13.28,19.5 12,19.5C7,19.5 2.73,16.39 1,12C1.69,10.24 2.79,8.69 4.19,7.46L2,5.27M12,9A3,3 0 0,1 15,12C15,12.35 14.94,12.69 14.83,13L11,9.17C11.31,9.06 11.65,9 12,9M12,4.5C17,4.5 21.27,7.61 23,12C22.18,14.08 20.79,15.88 19,17.19L17.58,15.76C18.94,14.82 20.06,13.54 20.82,12C19.17,8.64 15.76,6.5 12,6.5C10.91,6.5 9.84,6.68 8.84,7L7.3,5.47C8.74,4.85 10.33,4.5 12,4.5M3.18,12C4.83,15.36 8.24,17.5 12,17.5C12.69,17.5 13.37,17.43 14,17.29L11.72,15C10.29,14.85 9.15,13.71 9,12.28L5.6,8.87C4.61,9.72 3.78,10.78 3.18,12Z' /%3E%3C/svg%3E");
+            background-size: contain;
+            content: "";
+            background-position: center;
+            z-index: 100000000;
+        }
+    }
+    &:hover {
+        opacity: 1 !important;
+        &::after {
+            display: none !important;
+        }
+        .block-editor-controls {
+            opacity: 0.6;
+        }
+    }
+}
+.block-c .block-editor-controls:hover {
+    opacity: 1;
+}
+.item-menu {
+    z-index: calc(var(--base-z-index) + $item-menu-z-index);
+    position: absolute;
+    top: 6px;
+    right: 4px;
+    opacity: 0;
+    &.menu-is-open {
+        opacity: 1;
+    }
+    .v-toolbar__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.item-menu {
+    opacity: 0.8;
+}
+.item-menu:hover {
+    opacity: 1;
+}
+
+.gear-bg {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    background-color: #00000032;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: calc(var(--base-z-index) + $redactor-overlay-z-index);
+}
+.gear {
+    width: 40%;
+    max-width: 100px;
+    height: auto;
+    z-index: calc(var(--base-z-index) + $redactor-overlay-gear-z-index);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.empty-container {
+    .add-item-btn {
+        visibility: hidden;
+    }
+    &:hover .add-item-btn {
+        visibility: visible;
+    }
+}
+.card-c:hover .noks-zone-toolbar {
+    display: flex;
+}
+.columns-c:hover .noks-zone-toolbar {
+    display: flex;
+}
+.item-layout {
+    &:hover {
+        @include shadow-border;
+    }
+    --pointer-events: none;
+    &.select {
+        z-index: calc(
+            var(--base-z-index) + 1
+        ); //Без этого припопытке потянуть за нижний resize-handleег перекрывает add button нижнего item'a
+        --pointer-events: auto;
+        @include shadow-border-thin;
+        .gear-bg:hover {
+            opacity: 1;
+        }
+    }
+    .item-container {
+        pointer-events: var(--pointer-events);
+    }
+    &.hide-controls {
+        .gear-bg {
+            visibility: hidden;
+        }
+        box-shadow: none !important;
+        .item-controls {
+            visibility: hidden !important;
+        }
+    }
+}
+
+//draggable
+//zones
+.window-toolbar {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding-top: 10px;
+    position: absolute;
+    z-index: calc(var(--base-z-index) + 1000);
+}
+.noks-zone-toolbar {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    transform: translateY(-100%);
+    padding-bottom: 5px;
+    padding-right: 100px;
+    z-index: calc(var(--base-z-index) + $noks-controls-z-index);
+    &:hover {
+        opacity: 1 !important;
+    }
+    .v-toolbar__append {
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+    }
+}
+.noks-block-title-toolbar {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    transform: translateY(-100%);
+    padding-bottom: 5px;
+    padding-right: 100px;
+    &:hover {
+        opacity: 1 !important;
+    }
+}
+.block-title:hover .noks-block-title-toolbar {
+    display: flex;
+}
+//color-picker-eye-dropper
+.eyeDropper {
+    position: absolute;
+    top: 219px;
+    left: calc(100% - 40px);
+    width: 20px;
+    z-index: calc(var(--base-z-index) + $color-picker-eye-dropper-z-index);
+    height: 20px;
+}
+.autoColor {
+    position: absolute;
+    top: 219px;
+    left: calc(100% - 70px);
+    width: 20px;
+    z-index: $color-picker-eye-dropper-z-index;
+    height: 20px;
+}
+.noks-draggable-ghost {
+    box-shadow: none !important;
+    opacity: 0.6;
+
+    .card-bg,
+    .column-bg {
+        background-color: $theme-editor !important;
+    }
+    .noks-zone-toolbar,
+    .items-list,
+    .add-item-btn {
+        opacity: 0;
+    }
+    //items
+    .item-overlay-editor {
+        visibility: visible;
+        opacity: 1;
+    }
+    .item-container,
+    .item-controls {
+        opacity: 0;
+    }
+}
+.item-controls {
+    user-select: none;
+}
+.noks-draggable-fallback {
+    // transform: scale(0.5);
+    opacity: 1 !important;
+}
+
+.noks-draggable-img-ghost {
+    box-shadow: none !important;
+    opacity: 1;
+}
+.noks-draggable-img-fallback {
+    opacity: 0.6 !important;
+}
+
+//animations
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+    opacity: 0;
+}
+//items
+.item-image {
+    .content-bg-image {
+        pointer-events: none;
+    }
+}
+.deleteImageFromSlider {
+    opacity: 0;
+}
+.imageInSlider:hover {
+    // opacity: 0.6; //TODO сделать затемнение фотки при наведении внутри слайдер редактора
+    .deleteImageFromSlider {
+        opacity: 1;
+    }
+}
+//texteditor
+.ck-powered-by-balloon {
+    visibility: hidden !important;
+}
+.ck.ck-editor {
+    max-height: 150px;
+}
+.ck.ck-editor__editable_inline {
+    padding: 0 !important;
+    text-align: inherit !important;
+    & > :first-child {
+        margin-top: 0 !important;
+    }
+    & > :last-child {
+        margin-bottom: 0 !important;
+    }
+}
+//side-size-indicators
+.side-size-indicator {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 6'%3E%3Cpath d='M0 6l6-6M-.75.75l1.5-1.5m4.5 7.5l1.5-1.5'  stroke='%23999'/%3E%3C/svg%3E");
+    background-size: 6px;
+    background-repeat: repeat;
+    position: absolute;
+    opacity: 0.6;
+    &.top {
+        width: calc(100% - var(--p-right) - var(--p-left));
+        left: v-bind(sizeLeft);
+        top: 0;
+        height: var(--p-top);
+    }
+    &.bottom {
+        width: calc(100% - var(--p-right) - var(--p-left));
+        left: v-bind(sizeLeft);
+        bottom: 0;
+        height: var(--p-bottom);
+    }
+    &.left {
+        top: 0;
+        height: 100%;
+        left: 0;
+        width: var(--p-left);
+    }
+    &.right {
+        top: 0;
+        height: 100%;
+        right: 0;
+        width: var(--p-right);
+    }
+}
+.side-size-indicator.bottom {
+    .percent-padding-bottom + & {
+        visibility: hidden;
+    }
+    .percent-padding-bottom.size-handle-is-move + & {
+        height: calc(100% - var(--p-top));
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 6'%3E%3Cpath d='M0 6l6-6M-.75.75l1.5-1.5m4.5 7.5l1.5-1.5' stroke='%23F531B3'/%3E%3C/svg%3E");
+        visibility: visible;
+    }
+}
+.clrpickrSizer:has(.vc-gradient-picker) {
+    .eyeDropper {
+        top: 304px;
+    }
+    .autoColor {
+        top: 304px;
+    }
+}
+// .vc-colorpicker--tabs__btn:last-child {
+//     background-color: #16151c !important;
+// }
+
+//video-redactor
+.upload-video {
+    transition: opacity 0.3s;
+    .upload-video-text {
+        color: $theme-editor !important;
+    }
+}
+.upload-video:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+.upload-cover {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    opacity: 0.6;
+}
+.delete-cover {
+    opacity: 0;
+    border: 1px solid $theme-primary;
+}
+.change-cover {
+    display: flex;
+    opacity: 0;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cover-bg {
+    position: relative;
+    cursor: pointer;
+}
+.cover-bg:hover {
+    .upload-cover {
+        opacity: 1;
+        transition: opacity 0.1s;
+    }
+    .delete-cover,
+    .change-cover {
+        opacity: 1;
+        transition: opacity 0.1s;
+    }
+}
+
+.window-overlay-container {
+    top: $menu-container-height !important;
+}
+//items
+button.buttton-main {
+    pointer-events: none;
+}
+.scrollable::-webkit-scrollbar,
+.scrollable ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.scrollable::-webkit-scrollbar-button,
+.scrollable ::-webkit-scrollbar-button {
+    display: block;
+    background-color: transparent;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+}
+.scrollable::-webkit-scrollbar-thumb,
+.scrollable ::-webkit-scrollbar-thumb {
+    background-color: rgba(68, 68, 68, 0.3);
+    border-radius: 6px;
+}
+.scrollable::-webkit-scrollbar-track,
+.scrollable ::-webkit-scrollbar-track {
+    background: transparent;
+    opacity: 0;
+}
+[off-margin-overlay-content] .v-overlay__content {
+    margin: 0 !important;
+}
+//slider
+.splide__slide--clone {
+    pointer-events: none;
+}
+@import "@/features/vuetify.scss";

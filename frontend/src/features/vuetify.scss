@@ -1,0 +1,77 @@
+@import "@/shared/constants/index.scss";
+//vuetify
+.noks-switch-row {
+    .v-selection-control {
+        min-height: 30px;
+    }
+    .v-label {
+        opacity: 1;
+        font-size: 13px;
+        font-weight: 400;
+    }
+}
+.noks-mini-text-field.v-text-field .v-field__field .v-field__input {
+    height: 35px;
+}
+.noks-v-switch {
+    padding-left: 6px;
+}
+.editorBg {
+    background-color: $theme-editorBg;
+}
+.v-redactor-container {
+    font-size: 13px;
+    font-weight: 400;
+    padding: 12px;
+    padding-bottom: calc(var(--redactor-line-spacing) + 12px);
+    .v-textarea {
+        .v-field__field {
+            height: auto;
+        }
+    }
+    .v-field__field {
+        height: 35px;
+        align-items: center;
+
+        input {
+            padding-top: 5px;
+            padding-bottom: 3px;
+        }
+        .v-text-field__suffix {
+            padding-top: 0;
+            padding-bottom: 0;
+            .v-text-field__suffix__text {
+                margin: 0 !important;
+            }
+        }
+    }
+    .v-col {
+        padding-top: var(--redactor-line-spacing);
+        padding-bottom: 0;
+    }
+}
+.noks-color-editor {
+    .v-field {
+        padding: 0 !important;
+        .v-field__prepend-inner {
+            min-height: 35px;
+            padding: 0 0 0 8px;
+        }
+        input {
+            min-height: 35px;
+            padding: 0 !important;
+            text-align: center;
+        }
+        .v-text-field__suffix {
+            min-height: 35px;
+            // border-left: solid 1px #00000061;
+            padding: 0 8px 0 0 !important;
+        }
+        // &:hover .v-text-field__suffix {
+        //     border-left-color: #000000;
+        // }
+    }
+}
+.v-btn-toggle {
+    color: $theme-secondary-lighten-3;
+}

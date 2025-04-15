@@ -1,0 +1,11 @@
+export enum MutationTypes {
+    SET_ID = "SET_ID",
+
+    SET_PAGE_URI = "SET_PAGE_URI",
+
+    SET_SITE_ID = "SET_SITE_ID",
+    SET_ACCESS_CODE = "SET_ACCESS_CODE",
+    SET_SUB_DOMAIN = "SET_SUB_DOMAIN",
+    SET_LOAD_PROJECT = "SET_LOAD_PROJECT",
+    SET_EMPTY = "SET_EMPTY",
+}

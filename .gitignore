@@ -1,0 +1,27 @@
+    /uploads/*
+/min/*
+/exchange_from/*
+/another/*
+/.DS_Store
+/cache/*
+*.cache
+/*.log
+/view_cache/*
+/cron/*.log
+/config.php
+/constants.php
+/config.js
+/.vscode/*
+/resource/img/quiz/Q2/*
+/resource/img/constructor/*
+/phinx.php
+/error_log
+/node_modules
+/cron/other/*.sqlite
+/jsconfig.json
+/.idea
+/composer.lock
+/ssl/_tasks/queue/*
+/constructor2/admin/dist/*
+/constructor2/analytics/dist/*
+/package-lock.json

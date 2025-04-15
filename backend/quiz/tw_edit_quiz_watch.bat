@@ -1,0 +1,1 @@
+npx tailwindcss -c ./tw_edit_quiz.config.js -i ./resource/css/edit/tw_input_edit_quiz.css -o ./resource/css/edit/tw_output_edit_quiz.css --watch

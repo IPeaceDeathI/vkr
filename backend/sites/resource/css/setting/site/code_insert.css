@@ -1,0 +1,26 @@
+.desc{
+    font-size: 1.3em;
+    font-weight:normal;
+    margin-bottom: 1em;
+    cursor: default;
+}
+
+.desc_warning_1{
+    width: 670px;
+    font-size: 1em;
+    font-weight:lighter;
+    color: #7e7e7e;
+    cursor: default;
+}
+
+textarea {
+    width: 670px;
+    height: 140px;
+    background: #EBF0FF;
+    box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    resize: none;
+    font-size: 1em;
+    border: 0px solid #ccc;
+    padding: 10px 16px;
+}

@@ -1,0 +1,1 @@
+npx tailwindcss -c ./tw_access_code.config.js -i ./resource/css/tw_input_access_code.css -o ./resource/css/tw_output_access_code.css --minify --watch

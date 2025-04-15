@@ -1,0 +1,44 @@
+.btn-noks-yes,
+.btn-noks-no {
+  color: #ffffff;
+  background: #119a22 !important;
+}
+
+.btn-noks-yes:hover,
+.btn-noks-no:hover {
+  background: #119a22bb !important;
+}
+
+.wrapper-main .btn {
+  margin-top: 1em;
+  border: none;
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #119a22;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.wrapper-main > label {
+  display: block;
+}
+
+input[type="email"] {
+  padding: 10px 16px;
+  width: 670px;
+  height: 40px;
+  background: #ebf0ff;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+}
+.wrapper-main .btn:hover {
+  background: #119a22bb;
+}

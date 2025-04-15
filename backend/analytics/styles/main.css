@@ -1,0 +1,130 @@
+html, body{
+    height: 100%;
+}
+body{
+    margin: 0;
+    background-color: #f1f2f3;
+}
+.main-wrapper{
+    position: relative;
+    padding-bottom: 0;
+    padding-top: 20px;
+    min-height: 100%;
+    font-size: 15px;
+    /* font-weight: 400; */
+    /* line-height: 24px; */
+    color: #1b2a30;
+    padding-left: 51px;
+    background-color: transparent;
+}
+.main-toolbar{
+    position: fixed;
+    top: 40px;
+    bottom: 0;
+    left: 0;
+    width: 51px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: #3E414B;
+    z-index: 2001;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+a.main-toolbar-item{
+    cursor: pointer;
+    text-decoration: inherit;
+    display: inline-flex;
+    align-items: center;
+    flex: none;
+    color: inherit;
+    margin-bottom: 4px; 
+    
+}
+.rs-item{
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    user-select: none;
+}
+.rs-item.select{
+  background-color: #2589FF;
+}
+.rs-item :hover{
+    background: rgba(15, 15, 15, 0.4);
+}
+.rs-simple-item{
+    position: relative;
+    min-height: 25px;
+    max-height: 25px;
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 18px;
+    color: #FFFFFF;
+    transition: width 0.1s ease-out;
+}
+.rs-simple-item .fa{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+}
+.rs-simple-item .fa:hover{
+    background: transparent
+}
+.module-wrapper{
+    padding: 2em;
+    padding-bottom: 0;
+    background-color: #f1f2f3;
+    overflow-y: auto;
+}
+.multi-channel-analytics{
+    height: 3000px;
+}
+.navigation-bar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1500;
+    height: 40px;
+    min-width: 480px;
+    font-size: 14px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1E222D;
+    padding: 0 4px;
+}
+.navigation-bar .logo-wrapper{
+    width: 40px;
+    height: 40px;
+}
+.admin-module{
+    display: flex;
+    flex-direction: column;
+}
+.navigation-bar .on-main-button{
+    width: 30px;
+    height: 30px;
+    background-color: #3E414B;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.navigation-bar .on-main-button:hover{
+    background-color: #353942;
+}
+.navigation-bar i{
+    color: white;
+    font-size: 18px;
+}
+

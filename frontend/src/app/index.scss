@@ -1,0 +1,64 @@
+@import "@/features/main.scss";
+@import "@/widgets/index.scss";
+
+.v-switch__track {
+    height: 18px;
+    width: 34px;
+}
+.v-switch .v-selection-control__input {
+    width: 18px;
+    height: 18px;
+}
+.v-switch__thumb {
+    width: 18px;
+    height: 18px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+.v-switch__track {
+    background-color: #e8e8e8;
+}
+.v-switch__track.bg-editor {
+    background-color: #119a2226 !important;
+}
+.editor-wrapper .v-field,
+.v-field {
+    height: 35px;
+    border-radius: 3px;
+    color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.15);
+}
+.v-redactor-container .v-field,
+.v-field {
+    // height: 100%;
+}
+.v-redactor-container .v-field__field {
+    height: 100%;
+}
+.v-field__overlay {
+    border: none;
+}
+.v-btn-group--density-default.v-btn-group {
+    height: 35px !important;
+}
+.v-redactor-container .v-field__field input {
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 35px;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.v-input--density-compact {
+    --v-input-control-height: 35px;
+    --v-input-padding-top: 0;
+}
+.v-input__control {
+    font-weight: 400;
+    font-size: 14px;
+}
+.noks-color-editor .v-field .v-text-field__suffix {
+    font-size: 14px;
+}
+.v-text-field input{
+    padding:5px;
+}

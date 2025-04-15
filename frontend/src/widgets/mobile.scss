@@ -1,0 +1,141 @@
+@import "@/shared/constants/index.scss";
+.block-area {
+    --gridWidth: #{$gridWidthMobile};
+}
+.block-c {
+    &[data-noks-element-visibility="pc"],
+    &[data-noks-element-visibility="hidden"] {
+        display: none;
+    }
+    &[data-noks-element-visibility="all"],
+    &[data-noks-element-visibility="mobile"] {
+        display: block;
+    }
+}
+.columns-wrapper {
+    flex-wrap: wrap !important;
+    margin: 0 !important;
+}
+.container {
+    width: var(--gridWidth) !important;
+    max-width: var(--gridWidth) !important;
+}
+.cards-container {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+    &.has-slider {
+        &[data-gallery-slider-visibility="all"] {
+            .not-slider {
+                display: none;
+            }
+            .splide {
+                display: block;
+            }
+        }
+        &[data-gallery-slider-visibility="pc"] {
+            .not-slider {
+                display: flex !important;
+            }
+            .splide {
+                display: none !important;
+            }
+        }
+        &[data-gallery-slider-visibility="mobile"] {
+            .not-slider {
+                display: none !important;
+            }
+            .splide {
+                display: block !important;
+            }
+        }
+    }
+}
+.cards-layout {
+    padding: 0px !important;
+}
+.card-c {
+    flex-basis: calc((100% / 1) - var(--gap-size) * 2) !important;
+    max-width: calc((100% / 1) - var(--gap-size) * 2) !important;
+}
+[data-w-id="MENU01"] {
+    display: flex;
+    flex-flow: column;
+}
+.block-header-area.hide-in-mobile {
+    padding-top: $burger-header-content;
+    & .block-header-wrapper {
+        display: none !important;
+    }
+}
+.header-items-list {
+    flex-direction: column;
+    align-items: center;
+    .item-layout {
+        padding: var(--elementsGap) 0;
+    }
+}
+.noks-column {
+    &.first-column {
+        --gapSizeTop: 0;
+    }
+    &.last-column {
+        --gapSizeBottom: 0;
+    }
+    --gapSizeTop: var(--gap-size);
+    --gapSizeBottom: var(--gap-size);
+    width: 100% !important;
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+    padding: var(--gapSizeTop) 0 var(--gapSizeBottom) !important;
+}
+//items
+.item-header-divider {
+    display: none !important;
+}
+.field-container {
+    flex-basis: 100% !important;
+    //TODO пофиксить пробелы в мобилке
+    &.empty {
+        visibility: hidden;
+    }
+}
+.item-form {
+    flex-direction: column !important;
+    align-items: center !important;
+}
+.component-form .form-submit {
+    margin: $gap-form-size 0 0 0 !important;
+}
+.form-fields .form-field-select .dropdown-container,
+.form-fields .form-field-select .select-outer,
+.quiz-fields .form-field-select .dropdown-container,
+.quiz-fields .form-field-select .select-outer {
+    min-height: 46px;
+}
+
+.form-fields .form-field-select .dropdown-select,
+.quiz-fields .form-field-select .dropdown-select {
+    font-size: 16px;
+    min-height: 46px;
+}
+
+.form-fields .form-field-select .atom-custom-select,
+.quiz-fields .form-field-select .atom-custom-select {
+    text-size-adjust: 120%;
+    -webkit-text-size-adjust: 120%;
+    -webkit-appearance: none;
+    font-size: 16px;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: calc(var(--base-z-index) + 1);
+    opacity: 0;
+}
+.component-form {
+    --formInputTextSize: 16px;
+}
+.component-form.inline .form-submit {
+    padding-top: 0;
+}

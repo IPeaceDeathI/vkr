@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.q1-item-check-on {
+  @apply shadow-[0_2px_6px_0_#119a2280] bg-white border-2 border-solid border-[#119a22] before:content-[''] before:absolute before:min-w-[13px] before:min-h-[13px] before:bg-[#119a22] before:rounded-[50%] before:left-0.5 before:top-0.5;
+}
+
+.q2-item-check-on {
+  @apply border border-solid border-[rgb(211_64_133_/_50%)];
+}

@@ -1,0 +1,16 @@
+.modaal-container {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+.modaal-inner-wrapper{
+    padding : 0;
+}
+.modaal-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modaal-content.modaal-focus{
+    width:100%
+}

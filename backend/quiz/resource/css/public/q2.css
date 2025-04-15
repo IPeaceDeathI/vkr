@@ -1,0 +1,116 @@
+.q2-wrp-item {
+  width: calc((100vw - 60px - (1.5em * 4)) / 4);
+  min-width: auto;
+  height: calc((100vh - 100px - 8em) / 2.5);
+  min-height: 14em;
+  border-radius: 4px;
+  border: 1px solid #eaeaea;
+  transition: 0.2s ease-out;
+  position: relative;
+}
+@media screen and (max-width: 900px) {
+  .q2-wrp-item {
+    width: calc((100vw - 60px - (1.5em * 3)) / 3);
+    min-width: auto;
+  }
+}
+@media screen and (max-width: 760px) {
+  .q2-wrp-item {
+    width: calc((100vw - 60px - (1.5em * 2)) / 2);
+    min-width: auto;
+  }
+}
+@media screen and (max-width: 360px) {
+  .q2-wrp-item {
+    width: calc((100vw - 60px - (1.5em * 0)) / 1);
+    min-width: auto;
+  }
+  [data-area-ques] {
+    padding-bottom: 8.5em;
+  }
+}
+.q2-checked {
+  border: 1px solid #119a2280;
+}
+.q2-wrp-item:hover {
+  border-color: #119a2280;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease-out;
+}
+
+.q2-wrp-item .q2-img {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.q2-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  height: 100%;
+}
+
+.q2-label input[type="checkbox"] {
+  display: none;
+}
+
+.q2-label input[type="text"] {
+  border: none;
+  height: 4em;
+  padding: 0 0 0 5px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.q2-label input[type="text"]:focus {
+  outline: none;
+}
+
+.q2-answer {
+  display: flex;
+  align-items: center;
+  /* height: 4em; */
+  padding: 1em 0.5em;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.q2-answer-text {
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+  overflow: hidden;
+  padding-left: 0.5em;
+  align-items: center;
+  min-height: 2em;
+}
+
+.q2-check {
+  /* display: none; */
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: hsla(0, 0%, 100%, 0.5);
+  -webkit-box-shadow: 0.6px 1.9px 6px 0 rgba(211, 64, 133, 0.2);
+  box-shadow: 0.6px 1.9px 6px 0 rgba(211, 64, 133, 0.2);
+  border: 2px solid #119a22;
+}
+
+.q2-check::before {
+  content: "";
+  background: #119a22;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.625em;
+  bottom: 50%;
+  margin-bottom: -0.625em;
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 50%;
+}

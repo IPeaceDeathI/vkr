@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol viewBox="0 0 12 7" fill="none" id="arrow-desc">
+        <path d="M9 4L6 1L3 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol viewBox="0 0 12 7" fill="none" id="arrow-asc">
+        <path d="M3 3L6 6L9 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol viewBox="0 0 6 6" fill="none" id="indicator">
+        <circle cx="3" cy="3" r="3"/>
+    </symbol>
+
+    <symbol viewBox="0 0 14 14" fill="none" id="check">
+        <path d="M12.3334 3L5.00002 10.3333L1.66669 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol viewBox="0 0 16 16" id="icon-asc">
+        <path d="M3 1H0V3H3V1Z" />
+        <path d="M6 5H0V7H6V5Z" />
+        <path d="M9 9H0V11H9V9Z" />
+        <path d="M16 13H0V15H16V13Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 0.292893C12.3166 -0.097631 11.6834 -0.097631 11.2929 0.292893L8.29289 3.29289C7.90237 3.68342 7.90237 4.31658 8.29289 4.70711C8.68342 5.09763 9.31658 5.09763 9.70711 4.70711L11 3.41421V11H13V3.41421L14.2929 4.70711C14.6834 5.09763 15.3166 5.09763 15.7071 4.70711C16.0976 4.31658 16.0976 3.68342 15.7071 3.29289L12.7071 0.292893Z" />
+    </symbol>
+
+    <symbol viewBox="0 0 16 16" id="icon-desc">
+        <path d="M0 1H3V3H0V1Z" />
+        <path d="M0 5H6V7H0V5Z" />
+        <path d="M0 9H8V11H0V9Z" />
+        <path d="M0 13H16V15H0V13Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7.58579L14.2929 6.29289C14.6834 5.90237 15.3166 5.90237 15.7071 6.29289C16.0976 6.68342 16.0976 7.31658 15.7071 7.70711L12.7071 10.7071C12.3166 11.0976 11.6834 11.0976 11.2929 10.7071L8.29289 7.70711C7.90237 7.31658 7.90237 6.68342 8.29289 6.29289C8.68342 5.90237 9.31658 5.90237 9.70711 6.29289L11 7.58579L11 0H13L13 7.58579Z" />
+    </symbol>
+
+    <symbol viewBox="0 0 14 14" fill="none" id="search">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9 5.5C9 7.433 7.433 9 5.5 9C3.567 9 2 7.433 2 5.5C2 3.567 3.567 2 5.5 2C7.433 2 9 3.567 9 5.5ZM8.61752 10.0317C7.73148 10.6424 6.6575 11 5.5 11C2.46243 11 0 8.53757 0 5.5C0 2.46243 2.46243 0 5.5 0C8.53757 0 11 2.46243 11 5.5C11 6.6575 10.6424 7.73148 10.0317 8.61752L13.7071 12.2929L12.2929 13.7071L8.61752 10.0317Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol viewBox="0 0 10 10" fill="none" id="reset">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 9L1 10L5 6L9 10L10 9L6 5L10 1L9 0L5 4L1 0L0 1L4 5L0 9Z" fill="currentColor"/>
+    </symbol>
+
+    <symbol viewBox="0 0 16 16" id="cards-view">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2H5V5H2L2 2ZM0 2C0 0.89543 0.895431 0 2 0H5C6.10457 0 7 0.895431 7 2V5C7 6.10457 6.10457 7 5 7H2C0.89543 7 0 6.10457 0 5V2ZM2 11H5V14H2L2 11ZM0 11C0 9.89543 0.895431 9 2 9H5C6.10457 9 7 9.89543 7 11V14C7 15.1046 6.10457 16 5 16H2C0.89543 16 0 15.1046 0 14V11ZM14 2H11V5H14V2ZM11 0C9.89543 0 9 0.89543 9 2V5C9 6.10457 9.89543 7 11 7H14C15.1046 7 16 6.10457 16 5V2C16 0.895431 15.1046 0 14 0H11ZM11 11H14V14H11V11ZM9 11C9 9.89543 9.89543 9 11 9H14C15.1046 9 16 9.89543 16 11V14C16 15.1046 15.1046 16 14 16H11C9.89543 16 9 15.1046 9 14V11Z" fill="currentColor" />
+    </symbol>
+
+    <symbol viewBox="0 0 16 16" id="table-view">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7 1H0V3H7V1ZM7 5H0V7H7V5ZM0 9H7V11H0V9ZM7 13H0V15H7V13ZM9 1H16V3H9V1ZM16 5H9V7H16V5ZM9 9H16V11H9V9ZM16 13H9V15H16V13Z" fill="currentColor"/>
+    </symbol>
+</svg>

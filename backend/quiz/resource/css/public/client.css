@@ -1,0 +1,54 @@
+.hidden-iframe{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(25,25,25,0.89);
+    visibility: hidden;
+    position: fixed;
+    opacity: 0;
+    z-index: -10000;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.show-iframe{
+    visibility: visible;
+    z-index: 2147483647;
+    opacity: 1;
+}
+
+.quiz-modal{
+    visibility: hidden;
+    z-index: 100010;
+    position: relative;
+    max-width: 1200px;
+    /* height: 94%; */
+    width: 80%;
+}
+
+.show-iframe .quiz-modal{
+    visibility: visible;
+}
+
+.quiz-frame{
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    transition: height .2s ease-in;
+    height: 650px;
+}
+
+.quiz-frame-open{
+    display: block;
+    width: 100%;
+}

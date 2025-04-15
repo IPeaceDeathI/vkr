@@ -1,0 +1,123 @@
+body {
+  font-family: 'Open Sans', 'Calibri';
+}
+
+/* Table */
+.table-2d{
+    overflow-x: auto; 
+    margin: 1em 0;
+}
+
+table {
+    width: 100%;
+    border-radius: 3px;
+    border-spacing: 0;
+  }
+  
+  thead th:hover{
+    /* background: #F9F9F9; */
+  }
+  
+  th {
+    background-color: ;
+    color: black;
+    cursor: pointer;
+    /* box-shadow: rgb(211, 214, 216) 0px 1px 1px 0px; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: .7em;
+    color: #ccc;
+    text-transform: uppercase;
+  }
+  
+  td {
+    background-color: #fff;
+    box-shadow: rgb(211, 214, 216) 0px -1px 0px 0px;
+    width: 7em;
+    min-width: 7em;
+    max-width: 7em;
+  }
+
+  tr.nested-table {
+    position: relative;
+  }
+  tr.nested-table > td {
+    background-color: #f1f2f3;
+  }
+  /* tr.nested-table .table-2d:after {
+    content: 'Сайты и страницы';
+    position: absolute;
+    top: .7em;
+    left: 1.7em;
+    font-size: .7em;
+    color: #ccc;
+  } */
+  tr.nested-table > td {
+    padding: 0 0 .5em 1em;
+  }
+  tr td:last-child:hover {
+    background-color: #f1f2f3;
+    cursor: pointer;
+  }
+  /* tr td:last-child:after {
+    content: '+';
+    position: relative;
+    color: #36c;
+    font-weight: bold;
+  } */
+  
+  td,th{
+    text-align: right;
+  }
+  th:nth-child(2),
+  td:nth-child(2){
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+  
+  
+  th,td {
+    padding: .5em 1em;
+    overflow: hidden;
+  }
+ 
+  th.active {
+    background-color: rgb(247, 250, 255);
+  }
+
+  th.active .arrow {
+    opacity: 1;
+  }
+  tbody tr:hover{
+    /* background: #F9F9F9; */
+  }
+  .arrow {
+    display: inline-block;
+    vertical-align: middle;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    opacity: 0.66;
+  }
+  
+  .arrow.asc {
+    display: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid black;
+  }
+  
+  .arrow.dsc {
+    display: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid black;
+  }
+  th.active  span{
+    display: inline-block !important;
+  }
+

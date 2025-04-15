@@ -1,0 +1,104 @@
+@import "@/shared/constants/index.scss";
+
+.block-main-area {
+    .block-body {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        --elements-justify: start;
+        --elements-align: flex-start;
+        --gap-size: #{$gap-size-middle};
+        --width: #{$gridWidth};
+        //TODO ПОДУМАТЬ НАД МОБИЛКОЙ
+        width: 100%;
+        max-width: var(--width);
+        .container {
+            position: relative;
+            //TODO ПОДУМАТЬ НАД МОБИЛКОЙ
+            width: 100%;
+            max-width: var(--width) !important;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .body-layout {
+            width: 100%;
+            max-width: var(--containerMaxWidth);
+            .cards-layout {
+                flex-flow: column;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                // padding: 0 calc(var(--gap-size) * 2);
+                .cards-container {
+                    position: relative;
+                    flex-grow: 1;
+                    display: flex;
+                    width: 100%;
+                    min-height: 20px;
+                    margin: 0 auto;
+                    flex-shrink: 0;
+                    flex-flow: row wrap;
+                    &.has-slider {
+                        &[data-gallery-slider-visibility="all"] {
+                            .not-slider {
+                                display: none;
+                            }
+                            .splide {
+                                display: block;
+                            }
+                        }
+                        &[data-gallery-slider-visibility="mobile"] {
+                            .not-slider {
+                                display: flex;
+                            }
+                            .splide {
+                                display: none;
+                            }
+                        }
+                        &[data-gallery-slider-visibility="pc"] {
+                            .not-slider {
+                                display: none;
+                            }
+                            .splide {
+                                display: block;
+                            }
+                        }
+                    }
+                    .cards-wrapper {
+                        width: 100%;
+                        display: flex;
+                        min-height: $item-min-height;
+                        max-width: calc(100% + var(--gap-size) * 2);
+                        justify-content: var(--elements-justify);
+                        align-items: var(--elements-align);
+                        flex-shrink: 0;
+                        flex-grow: 1;
+                        flex-flow: row wrap;
+                        margin: calc(var(--gap-size) * -1);
+                    }
+                }
+            }
+            .columns-layout {
+                .columns-wrapper {
+                    position: relative;
+                    display: flex;
+                    flex-grow: 1;
+                    flex-shrink: 0;
+                    width: 100%;
+                    min-height: 20px;
+                    flex-flow: row nowrap;
+                    align-items: var(--elements-align);
+                    margin: 0 calc(var(--gap-size, 0px) * -1);
+                }
+            }
+        }
+        .show-btn {
+            opacity: 1;
+        }
+        .not-show-btn {
+            opacity: 0;
+        }
+    }
+}

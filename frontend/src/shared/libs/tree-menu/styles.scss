@@ -1,0 +1,35 @@
+.tree-menu-item ::v-deep(*) {
+    font-size: 13px !important;
+}
+.tree-menu-item ::v-deep(i) {
+    font-size: 20px !important;
+}
+// .tree-menu-item {
+//     min-height: 30px !important;
+// }
+.tree-menu-item ::v-deep(.v-btn-group) {
+    height: 30px;
+    .v-btn {
+        flex: 1 1 0;
+    }
+}
+.tree-menu-item ::v-deep(.v-selection-control) {
+    min-height: 32px;
+}
+.tree-menu-item ::v-deep(.v-switch .v-selection-control__wrapper) {
+    transform: scale(0.8);
+}
+.tree-menu-item ::v-deep(.v-list-item__prepend .v-list-item__spacer) {
+    width: 10px;
+}
+.tree-menu-item ::v-deep(.v-list-item__content) {
+    justify-content: flex-start;
+}
+.tree-menu-text-field::v-deep(.v-field) {
+    padding-right: 4px;
+    padding-left: 4px;
+    height: 38px;
+}
+.tree-menu-text-field input {
+    padding: 0px 2px !important;
+}

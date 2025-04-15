@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36.19 11">
+    <defs>
+        <style>
+            .cls-1{fill:#c4c4c4}.cls-2{fill:#acacac}.cls-3{fill:#fff;stroke:#c4c4c4}.cls-4{stroke:none}.cls-5{fill:none}
+        </style>
+    </defs>
+    <g id="range" transform="translate(-240 -126)">
+        <g id="Group_101" data-name="Group 101" transform="translate(260 128)">
+            <rect id="Rectangle_74" width="36.19" height="7.02" class="cls-1" data-name="Rectangle 74" rx="2" transform="translate(-20)"/>
+            <rect id="Rectangle_77" width="17.19" height="7.02" class="cls-2" data-name="Rectangle 77" rx="2" transform="translate(-20)"/>
+            <g id="Ellipse_17" class="cls-3" data-name="Ellipse 17" transform="translate(-7 -2)">
+                <circle cx="5.5" cy="5.5" r="5.5" class="cls-4"/>
+                <circle cx="5.5" cy="5.5" r="5" class="cls-5"/>
+            </g>
+        </g>
+    </g>
+</svg>

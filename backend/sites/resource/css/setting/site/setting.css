@@ -1,0 +1,202 @@
+.wrapper-edit-site {
+  height: 100%; /*Было 90vh*/
+  display: flex;
+  margin: 0;
+}
+
+.wrapper-edit-site .left-block {
+  max-width: 250px;
+  min-width: 250px;
+}
+
+.wrapper-edit-site .right-block {
+  padding: 30px 30px 30px 30px;
+  width: 100%;
+  background-color: #fafafa;
+  min-height: 100vh;
+}
+
+/* меню настроек */
+
+.setting-block {
+  height: 100%;
+  background: #f3f3f3;
+  /* box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.25); */
+  min-width: 250px;
+}
+.setting-block .menu-header {
+  font-size: 24px;
+  padding: 40px 30px 10px 30px;
+}
+
+.setting-block .list {
+  height: 100%;
+  /* margin: 0 10px 0 0; */
+  overflow-y: auto;
+}
+
+.list a {
+  display: block;
+  text-decoration: none;
+}
+
+.list .chapter {
+  color: #b7b8ba;
+  line-height: 1.4;
+  padding: 0 30px;
+  margin: 25px 0 10px;
+  font-size: 13px;
+}
+
+.hr {
+  margin-left: auto;
+  width: 97%;
+  margin-top: 10px;
+  border-top: 1px solid #d8d8d8;
+}
+
+.list .button {
+  padding: 9px 0 9px 30px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
+  color: #898b8f;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+.list .button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.list .button:hover {
+  background-color: #eaebeb;
+  color: #000;
+}
+
+.list .now {
+  background-color: #eaebeb;
+  text-decoration: none;
+  color: #000;
+}
+.list .now svg {
+  color: #119a22;
+}
+
+.list .button-ban {
+  margin: 0 10px 0 20px;
+  padding: 10px 0 10px 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* seo.php */
+
+.right-block .title {
+  font-weight: 500;
+  font-size: 24px;
+  color: #000000;
+  padding: 0.3em 0;
+  flex: auto;
+}
+
+.right-block .hr {
+  width: 80%;
+  border-bottom: 1px solid #c8c8c8;
+  margin: 20px 0 20px 0;
+}
+
+.right-block .sub-title {
+  margin: 15px 0 15px 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+
+.right-block input[type="text"] {
+  width: 670px;
+  height: 40px;
+  background: #ebf0ff;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  border: none;
+  padding: 10px 16px;
+  font-size: 1em;
+}
+
+.btn-noks-yes,
+.btn-noks-no {
+  color: #ffffff;
+  background: #119a22 !important;
+}
+
+.btn-noks-yes:hover,
+.btn-noks-no:hover {
+  background: #119a22bb !important;
+}
+
+.btn-action {
+  text-align: center;
+  cursor: pointer;
+  margin-top: 1em;
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+  background: #119a22;
+  border-radius: 6px;
+  padding: 0.7em 1.2em;
+  border: none;
+}
+.btn-action:hover {
+  background: #119a22bb;
+}
+
+.btn-action.btn-two {
+  background: #8e1053bb;
+}
+.btn-action.btn-two:hover {
+  background: #8e105399;
+}
+
+.mr-05 {
+  margin-right: 0.5em;
+}
+
+/*  activity  */
+
+.right-block > select {
+  border: 1px solid #fff;
+  border-radius: 0.3em;
+  font-size: 1em;
+  padding: 10px 16px;
+  appearance: none;
+  background-image: url(/images/right.grey.png);
+  background-position: 97% center;
+  background-size: 1em;
+  background-repeat: no-repeat;
+  background-color: #f4f5f8;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.right-block select:hover,
+.right-block select:focus {
+  border-color: #888;
+}
+
+.right-block select option {
+  background-color: #f4f5f8;
+  border-radius: 0.3em;
+}
+.right-block select option:hover {
+  background-color: #f5f5f5;
+}
+.right-block select option:checked {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}

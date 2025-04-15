@@ -1,0 +1,13 @@
+<svg width="848" height="610" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M268 16 C316 16, 316 16 316 90 S316 164 364 164" stroke="#767F83" fill="transparent"></path>
+    <path d="M580 16 C532 16, 532 16 532 90 S532 164 484 164" stroke="#767F83" fill="transparent"></path>
+    <!-- <path d="M714 406 C714 351.5, 714 351.5 584 351.5 S454 351.5 454 297 V188" stroke="#767F83" fill="transparent"></path> -->
+    <path d="M424 406 424 198" stroke="#767F83" fill="transparent"></path>
+    <!-- <path d="M134 406 C134 351.5, 134 351.5 264 351.5 S394 351.5 394 297 V188" stroke="#767F83" fill="transparent"></path> -->
+    <polygon points="364 164, 359 159, 359 169" stroke="#767F83" fill="#767F83"></polygon>
+    <polygon points="484 164, 489 159, 489 169" stroke="#767F83" fill="#767F83"></polygon>
+    <!-- <polygon points="714 406, 719 401, 709 401" stroke="#767F83" fill="#767F83"></polygon> -->
+    <polygon points="424 193, 429 198, 419 198" stroke="#767F83" fill="#767F83"></polygon>
+    <polygon points="424 406, 429 401, 419 401" stroke="#767F83" fill="#767F83"></polygon>
+    <!-- <polygon points="134 406, 139 401, 129 401" stroke="#767F83" fill="#767F83"></polygon> -->
+</svg>

@@ -1,0 +1,6 @@
+export enum MutationTypes {
+    SET_ADMIN = "SET_ADMIN",
+    SET_TESET = "SET_TESET",
+    SET_BLOCK_CREATOR = "SET_BLOCK_CREATOR",
+    SET_COMMON_USER = "SET_COMMON_USER",
+}

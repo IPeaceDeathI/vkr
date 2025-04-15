@@ -1,0 +1,56 @@
+.wrapper-add-site {
+  margin: 30px 0 0 30px;
+}
+
+.wrapper-add-site .title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.wrapper-add-site .hr {
+  width: 90%;
+  border-bottom: 1px solid #c8c8c8;
+  margin: 20px 0 20px 0;
+}
+
+.wrapper-add-site .sub-title {
+  margin: 15px 0 15px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.wrapper-add-site input[type="text"] {
+  width: 670px;
+  height: 40px;
+  background: #ebf0ff;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.wrapper-add-site input[type="submit"] {
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  display: block;
+  width: 160px;
+  height: 45px;
+  background: #119a22;
+  border-radius: 10px;
+}
+
+.btn-noks-yes,
+.btn-noks-no {
+  color: #ffffff;
+  background: #119a22 !important;
+}
+
+.btn-noks-yes:hover,
+.btn-noks-no:hover {
+  background: #119a22bb !important;
+}

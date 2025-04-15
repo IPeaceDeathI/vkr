@@ -1,0 +1,70 @@
+//theme
+$theme-primary: #ffffff;
+$theme-primary-darken-1: #e2e2e2;
+$theme-secondary: #30343b;
+$theme-secondary-lighten-3: #777b83;
+$theme-editor: #119a22;
+$theme-editorBg: #fafafa;
+$theme-primary-opacity: #ffffff91;
+$theme-editor-opacity: #4772ff32;
+$menu-elevation: #30343b;
+//z-indexes
+$block-bg-z-index: 0;
+$block-bg-overlay-z-index: 1;
+$zone-item-list-z-index: 2;
+$zone-border-z-index: calc($zone-item-list-z-index + 1);
+$zone-bg-z-index: calc($zone-item-list-z-index - 1);
+$zone-empty-container-z-index: $zone-item-list-z-index + 2;
+$redactor-overlay-z-index: 500;
+$block-editor-controls-z-index: 503;
+$noks-controls-z-index: 505;
+$redactor-overlay-gear-z-index: 510;
+$item-menu-z-index: 810;
+$column-resize-handle-z-index: 998;
+$editor-item-overlay-editor-z-index: 999;
+$editor-add-block-btns-z-index: 1050;
+$editor-add-item-btn-area-z-index: 1060;
+
+$block-header-z-index: 500; //base-z-index
+
+$windows-modal-z-index: 2000;
+$color-picker-eye-dropper-z-index: 10000;
+
+$editor-area-side-indicator-z-index: $editor-add-block-btns-z-index + 1;
+$editor-resize-hadl-z-index: $editor-area-side-indicator-z-index + 1;
+//main
+$mobileViewPortWidth: 400px;
+$gridWidth: 1150px;
+$gridWidthMobile: 360px;
+//style
+$gap-size-none: 0px;
+$gap-size-middle: 13px;
+$gap-size-large: 25px;
+$gap-form-size: 20px;
+
+//zone
+$zone-min-height: 30px;
+$burger-header-content: 60px;
+//items
+$item-min-height: 30px;
+
+$base-color: #c6538c;
+$menu-container-height: 80px;
+$editor-container-height: calc(100vh - $menu-container-height);
+@mixin centering-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin shadow-border {
+    box-shadow: 2px 0 0 $theme-editor, 0 2px 0 $theme-editor,
+        -2px 0 0 $theme-editor, 0 -2px 0 $theme-editor;
+}
+@mixin shadow-border-thin {
+    box-shadow: 1px 0 0 $theme-editor, 0 1px 0 $theme-editor,
+        -1px 0 0 $theme-editor, 0 -1px 0 $theme-editor;
+}
+@mixin shadow-border-opacity {
+    box-shadow: 2px 0 0 $theme-editor-opacity, 0 2px 0 $theme-editor-opacity,
+        -2px 0 0 $theme-editor-opacity, 0 -2px 0 $theme-editor-opacity;
+}

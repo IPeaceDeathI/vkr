@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic,cyrillic-ext,latin-ext");@font-face {
+    font-family: Museo Sans;
+    src: url("museo300.eot");
+    src: url("museo300.woff") format("woff"),url("museo300.eot?#iefix") format("embedded-opentype"),url("museo300.ttf") format("truetype"),url("museo300.svg#museo_sans_cyrllight") format("svg");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Museo Sans;
+    src: url("museo500.eot");
+    src: url("museo500.woff") format("woff"),url("museo500.eot?#iefix") format("embedded-opentype"),url("museo500.ttf") format("truetype"),url("museo500.svg#museo_sans_cyrl500") format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Museo Sans;
+    src: url("museo700.eot");
+    src: url("museo700.woff") format("woff"),url("museo700.eot?#iefix") format("embedded-opentype"),url("museo700.ttf") format("truetype"),url("museo700.svg#museo_sans_cyrl700") format("svg");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Formular;
+    src: url("formular-regular.eot");
+    src: url("formular-regular.woff") format("woff"),url("formular-regular.eot?#iefix") format("embedded-opentype"),url("formular-regular.ttf") format("truetype"),url("formular-regular.svg") format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Formular;
+    src: url("formular-medium.eot");
+    src: url("formular-medium.woff") format("woff"),url("formular-medium.eot?#iefix") format("embedded-opentype"),url("formular-medium.ttf") format("truetype"),url("formular-medium.svg") format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: Formular;
+    src: url("formular-bold.eot");
+    src: url("formular-bold.woff") format("woff"),url("formular-bold.eot?#iefix") format("embedded-opentype"),url("formular-bold.ttf") format("truetype"),url("formular-bold.svg") format("svg");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: emoji;
+    src: local("Apple Color Emoji"),local("Android Emoji"),local("Segoe UI"),local(EmojiSymbols),local(Symbola),local("sans-serif");
+    unicode-range: u+1f300-1f5ff,u+1f600-1f64f,u+1f680-1f6ff,u+26??
+}

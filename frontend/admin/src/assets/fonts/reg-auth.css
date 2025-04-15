@@ -1,0 +1,9 @@
+body {
+    font-family: "Panton";
+}
+button {
+    background-color: #119a22 !important;
+}
+button:hover {
+    background-color: #119a22bb !important;
+}

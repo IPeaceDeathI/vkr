@@ -1,0 +1,37 @@
+[data-anchor="#install"]{
+    background-color: #fff;
+    padding: 1em 0;
+    border-radius: 0.5em;
+    box-shadow: 0 8px 12px rgb(0 0 0 / 15%);
+}
+
+.wrp-install{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wrp-install div{
+    margin: 1em;
+}
+
+textarea.txt-install{
+    border: 1px solid #d2d4d8;
+    width: 30em;
+    height: 20em;
+    font-size: 0.8em;
+    background-color: #dbdde0!important;
+    cursor: default;
+    color: #000!important;
+}
+
+.wrp-install input{
+    cursor: default;
+    display: block;
+    width: 20em;
+    height: 2.5rem;
+    padding: 0.375rem 0.75rem;
+    font-size: .875rem;
+    background-color: #dbdde0!important;
+    color: #000!important;
+}

@@ -1,0 +1,31 @@
+.header-title{
+    margin: 0 1em 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+select{
+    width: 90%;
+}
+
+.btn-amocrm{
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    margin: 1em 0;
+    font-size: 17px;
+    color: #fff;
+    width: 200px;
+    height: 45px;
+    background-color: #339dc8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.msg-error-amocrm{
+    color: #EF7C7C;
+    font-size: 14px;
+    font-weight: bold;
+}

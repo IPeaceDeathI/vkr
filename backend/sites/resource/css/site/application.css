@@ -1,0 +1,279 @@
+.wrapper-applications-site {
+  height: 100vh;
+  padding: 1em 1em 1em 2em;
+  background: #fff;
+}
+
+/* График */
+.wrapper-applications-site .wrapper-chart {
+  margin-top: 1em;
+  width: 60em;
+  height: 6em;
+  background: #fff5f2;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.wrapper-chart #appl_chart {
+  width: 100%;
+}
+
+/* фильтр */
+
+.wrapper-applications-site .wrapper-filter {
+  margin-top: 1em;
+  display: flex;
+}
+
+.wrapper-filter .filter-page {
+  cursor: pointer;
+  padding-left: 1.5em;
+  position: relative;
+  width: 42em;
+  height: 2.5em;
+  background: #ebf0ff;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+}
+
+.filter-page select {
+  color: #959696;
+  border: none;
+  font-size: inherit;
+  border-radius: 0;
+  padding: 0;
+  background-color: inherit;
+  cursor: inherit;
+  background: none;
+  padding: 0.7em 1.2em;
+  width: 100%;
+  appearance: none;
+  outline: none;
+}
+
+.filter-page::after {
+  content: "";
+  pointer-events: none;
+  right: 0;
+  top: 15px;
+  position: absolute;
+  margin-right: 15px;
+  display: inline-block;
+  background-image: url("../../img/select.png");
+  background-repeat: no-repeat;
+  background-size: 12px 7px;
+  width: 12px;
+  height: 7px;
+}
+
+.filter-page::before {
+  content: "";
+  pointer-events: none;
+  left: 1em;
+  top: 0.6em;
+  position: absolute;
+  display: inline-block;
+  background-image: url("../../img/pages_grey.png");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.wrapper-filter .filter-date_ {
+  cursor: pointer;
+  padding: 0 30px 0 35px;
+  border: none;
+  margin-left: 1em;
+  width: 16em;
+  height: 2.5em;
+  background: #ebf0ff;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  min-width: 0;
+
+  background-image: url("../../img/calendar_grey.png");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position-y: center;
+  background-position-x: 0.7em;
+}
+
+.wrapper-filter .close {
+  position: relative;
+}
+
+.wrapper-filter .close .btn_close {
+  cursor: pointer;
+  position: absolute;
+  right: 0.4em;
+  top: 0.5em;
+  background-image: url("../../img/close_grey.png");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Заявки */
+
+.wrapper-applications .application {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 1em 1em 0;
+  padding: 1em;
+  width: 60em;
+  height: 92px;
+  background: #fff;
+  box-shadow: 0 20px 20px rgb(48 52 59/7%), 0 -5px 10px -5px rgb(48 52 59/7%);
+  border-radius: 15px;
+}
+
+.application .left .info {
+  font-weight: 400;
+}
+
+.left .info .name {
+  color: #000000;
+  font-size: 1.2em;
+}
+
+.left .info .mail {
+  color: #5b84ff;
+}
+
+.left .info .date {
+  color: #959696;
+}
+
+.left .info .dot {
+  padding: 0 3px 0 3px;
+  font-weight: 800;
+  color: #000;
+}
+
+.application .left .phone {
+  margin-top: 5px;
+  color: #5b84ff;
+  font-weight: 400;
+  font-size: 1.8em;
+}
+
+.application .right {
+  display: flex;
+  align-items: center;
+}
+
+.right .deal {
+  padding: 0.7em 1.2em;
+  display: block;
+  text-decoration: none;
+  background: #ebf0ff;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  font-weight: 400;
+  color: #000;
+  font-size: 1em;
+}
+
+.right .deal::before {
+  content: "";
+  margin-right: 10px;
+  vertical-align: bottom;
+  display: inline-block;
+  background-image: url("../../img/url_blank_grey.png");
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  width: 15px;
+  height: 15px;
+}
+
+.right .status {
+  position: relative;
+  width: 15em;
+  /* width: auto; */
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: 400;
+}
+
+.right .status::after {
+  content: "";
+  pointer-events: none;
+  right: 0;
+  top: 15px;
+  position: absolute;
+  margin-right: 10px;
+  display: inline-block;
+  background-image: url("../../img/select.png");
+  background-repeat: no-repeat;
+  background-size: 12px 7px;
+  width: 12px;
+  height: 7px;
+}
+
+.right .status select {
+  border: none;
+  font-size: inherit;
+  border-radius: 0;
+  padding: 0;
+  background-color: inherit;
+  cursor: inherit;
+  background: none;
+  padding: 0.7em 1.2em;
+  appearance: none;
+  width: 100%;
+}
+
+.right .status select:focus {
+  outline: none;
+}
+
+/* Пагинация */
+
+.wrapper-applications-site .wrapper-pagination {
+  width: 60em;
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0 0 0;
+  padding-bottom: 1em;
+}
+
+.wrapper-pagination .counter {
+  color: #959696;
+  font-size: 1em;
+}
+
+.wrapper-pagination .pages {
+  display: flex;
+  color: #959696;
+  font-size: 1em;
+}
+
+.wrapper-pagination .pages a {
+  margin-left: 5px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 0.6em 1em;
+  border-radius: 10px;
+}
+
+.wrapper-pagination .pages .current {
+  color: #fff;
+  background-color: #ff9494;
+}
+
+.wrapper-pagination .pages .other {
+  color: #000;
+  background-color: #ebf0ff;
+}
+
+/* Правки в плагин jq "Date Range Picker" */
+.daterangepicker .drp-calendar {
+  max-width: 300px !important;
+}
+.daterangepicker td.in-range {
+  background-color: #bde5f6 !important;
+}

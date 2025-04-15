@@ -1,0 +1,75 @@
+.block-c {
+    position: relative;
+    width: 100%;
+    &[data-noks-element-visibility="mobile"],
+    &[data-noks-element-visibility="hidden"] {
+        display: none;
+    }
+    &[data-noks-element-visibility="all"],
+    &[data-noks-element-visibility="pc"] {
+        display: block;
+    }
+    .block-spacer {
+        position: relative;
+        width: 100%;
+        pointer-events: none;
+        &.top {
+            height: var(--top-side-height);
+        }
+        &.bottom {
+            height: var(--bottom-side-height);
+        }
+    }
+    .block-container {
+        --height: auto;
+        --bg-color: none;
+        --bg-overlay: none;
+        --bg-image: none;
+        --bg-position: none;
+        min-height: var(--height);
+        position: relative;
+        width: 100%;
+        .block-header-area {
+            position: relative;
+            width: 100%;
+        }
+        .block-anchor {
+            width: 0;
+            height: 0;
+        }
+        .block-bg {
+            position: absolute;
+            z-index: calc(var(--base-z-index) + $block-bg-z-index);
+            top: 0;
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            .layer {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .holder-image {
+                background-image: var(--bg-image);
+                background-size: cover;
+                background-position: var(--bg-position);
+                background-repeat: no-repeat;
+            }
+            .holder-video {
+            }
+            .holder-color {
+                background: var(--bg-color);
+            }
+            .holder-overlay {
+                z-index: calc(var(--base-z-index) + $block-bg-overlay-z-index);
+                background: var(--bg-overlay);
+            }
+        }
+        .block-main-area {
+            @include centering-container;
+            flex-flow: column;
+        }
+    }
+}

@@ -1,0 +1,1 @@
+npx tailwindcss -c ./tw_public_quiz.config.js -i ./resource/css/public/tw_input_public_quiz.css -o ./resource/css/public/tw_output_public_quiz.css --watch

@@ -1,0 +1,11 @@
+export enum ActionTypes {
+    ADD_ITEM_TO_ZONE = "ADD_ITEM_TO_ZONE",
+    ADD_SECONDS_ITEM_TO_ZONE = "ADD_SECONDS_ITEM_TO_ZONE",
+    UPDATE_CHILDREN = "UPDATE_CHILDREN",
+    SHIFT_COLUMNS = "SHIFT_COLUMNS ",
+    INCREASE_COLUMN = "INCREASE_COLUMN",
+    REDUCE_COLUMN = "REDUCE_COLUMN",
+    REMOVE_ITEM = "REMOVE_ITEM",
+    CLEAR = "CLEAR",
+}
+export type ColumnShiftDirection = "left" | "right";

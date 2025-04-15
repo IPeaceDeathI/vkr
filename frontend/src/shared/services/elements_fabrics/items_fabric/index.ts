@@ -1,0 +1,1 @@
+export { ItemsFabric } from "./ItemsFabric";

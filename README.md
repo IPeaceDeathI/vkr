@@ -4,7 +4,7 @@
 
 ---
 
-### 1️⃣ Клонируйте репозиторий
+### 1️⃣ Клонируйте репозиторий в отдельную папку
 ```bash
 git clone https://github.com/IPeaceDeathI/vkr.git
 cd vkr

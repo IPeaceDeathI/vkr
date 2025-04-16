@@ -1,7 +1,5 @@
 const { defineConfig } = require("@vue/cli-service");
 const path = require("path");
-const BundleAnalyzerPlugin =
-    require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const { styles } = require("@ckeditor/ckeditor5-dev-utils");
 // const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const webpack = require("webpack");
@@ -30,7 +28,6 @@ module.exports = defineConfig({
     // lintOnSave: false,
     configureWebpack: {
         plugins: [
-            new BundleAnalyzerPlugin({analyzerPort : 10000}),
             new webpack.DefinePlugin({
                 // Drop Options API from bundle
                 __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: true,

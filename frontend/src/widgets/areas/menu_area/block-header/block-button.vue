@@ -54,8 +54,6 @@ export default defineComponent({
     methods: {
         handleButtonClick() {
             if (this.navigateTo) {
-                this.$router.push(this.navigateTo);
-            } else if (this.methodName) {
                 this.$emit("method-clicked", this.methodName);
             }
         },

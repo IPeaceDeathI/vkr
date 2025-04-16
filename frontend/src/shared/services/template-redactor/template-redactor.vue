@@ -181,7 +181,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { draggableCard, redactorToolbar } from "@/features/structure";
-import { VForm } from "vuetify/lib/components/index.mjs";
 import { BundleCollector, BundleUncollector } from "@/entities";
 import { NotificationService } from "../notification_service/NotificationService";
 import { TemplateSchema } from "@/shared/api/models";
@@ -304,7 +303,7 @@ export default defineComponent({
         async publish() {
             if (!this.createNew) return;
             this.isLoading = true;
-            const form = this.$refs.form as VForm;
+            const form = this.$refs.form as any;
             const { valid } = await form.validate();
             if (valid === false) {
                 this.isLoading = false;
@@ -324,7 +323,7 @@ export default defineComponent({
         },
         async exportForm() {
             this.isLoading = true;
-            const form = this.$refs.form as VForm;
+            const form = this.$refs.form as any;
             const { valid } = await form.validate();
             if (valid === false) {
                 this.isLoading = false;

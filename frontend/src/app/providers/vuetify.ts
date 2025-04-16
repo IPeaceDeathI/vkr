@@ -1,23 +1,10 @@
 // Styles
 import "vuetify/styles";
 import { createVuetify, ThemeDefinition } from "vuetify";
-import {
-    VDialog,
-    VTabs,
-    VCard,
-    VToolbar,
-    VContainer,
-    VToolbarItems,
-    VRow,
-    VSlider,
-    VInput,
-    VList,
-} from "vuetify/lib/components/index.mjs";
 import "@mdi/font/css/materialdesignicons.css";
 
 import { mdi } from "vuetify/iconsets/mdi";
 import { themeVariable } from "@/shared/constants/default_values";
-//TODO АХУЕТЬ КАК-ТО МОЖНО ПЕРЕДАВТЬ ПЕРЕМЕННЫЕ ИЗ scss ФАЙЛОВ В js. Подумать над единым источников правды для стилей приложение в виде scss файла
 const myCustomLightTheme: ThemeDefinition = {
     dark: false,
     colors: {
@@ -36,23 +23,6 @@ const myCustomLightTheme: ThemeDefinition = {
 };
 
 export const vuetify = createVuetify({
-    aliases: {
-        VNoksModal: VDialog,
-        VNoksMediaRedactor: VCard,
-        VElementToolbar: VToolbar,
-        VItemMenuToolbar: VToolbar,
-        VToolbarItemsSmall: VToolbarItems,
-        VNoksMenu: VToolbar,
-        VRedactorToolbar: VToolbar,
-        VSubredactorTabs: VTabs,
-        VComponentTabs: VTabs,
-        VRedactorContainer: VContainer,
-        VRedactorSlider: VSlider,
-        VSwitchRow: VRow,
-        VRedactorTitle: VInput,
-        VNavigationList: VList,
-        VCardDialog: VCard,
-    },
     icons: {
         defaultSet: "mdi",
         sets: {
@@ -248,11 +218,6 @@ export const vuetify = createVuetify({
         VToolbarTitle: {
             class: "text-subtitle-1",
         },
-        // VNavigationList: {
-        //     VListItem: {
-        //         style: "font-size: 13px; opacity : 0.7",
-        //     },
-        // },
     },
     theme: {
         defaultTheme: "myCustomLightTheme",
@@ -266,76 +231,3 @@ export const vuetify = createVuetify({
         },
     },
 });
-
-/*
-import "vuetify/styles";
-import { createVuetify } from "vuetify";
-import { VBtn, VMenu, VSheet } from "vuetify/lib/components/index.mjs";
-
-export default createVuetify({
-    aliases: {
-        VCircleBtnIcon: VBtn,
-        VDropdownMiniMenu: VMenu,
-        VFieldsEditorSheet: VSheet,
-    },
-    defaults: {
-        global: {
-            "hide-details": "auto",
-        },
-        VBtn: {
-            color: "deep-purple-accent-4",
-        },
-        VTextField: {
-            density: "compact",
-            variant: "outlined",
-            hideDetails: "auto",
-        },
-        VSwitch: {
-            density: "compact",
-            variant: "outlined",
-            hideDetails: "auto",
-        },
-        VSelect: {
-            density: "compact",
-            variant: "outlined",
-            hideDetails: "auto",
-        },
-        VSlider: {
-            density: "compact",
-            variant: "outlined",
-            hideDetails: "auto",
-        },
-        VCheckbox: {
-            hideDetails: "auto",
-        },
-        VCircleBtnIcon: {
-            variant: "text",
-            size: "small",
-            rounded: "circle",
-            style: `color : black;
-            background-color : white;
-            `,
-        },
-        VAutocomplete: {
-            density: "compact",
-            variant: "outlined",
-            hideDetails: "auto",
-        },
-        VDropdownMiniMenu: {
-            VSheet: {
-                elevation: 4,
-                VInput: {
-                    density: "compact",
-                },
-            },
-        },
-        VFieldsEditorSheet: {
-            VCheckbox: {
-                density: "compact",
-                color: "deep-purple-accent-4",
-            },
-        },
-    },
-});
-
-*/

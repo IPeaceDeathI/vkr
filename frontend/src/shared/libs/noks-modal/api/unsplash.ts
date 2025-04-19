@@ -41,8 +41,7 @@ export interface PromisePhotos {
     };
 }
 
-// const clientId = process.env.NEXT_PUBLIC_UNSPLASH_CLIENT_ID;
-const clientId = "g4n12dNmBDxp8t6hCjlwD7LUstVLfAALbLOi6o4j6zE";
+const clientId = process.env.NEXT_PUBLIC_UNSPLASH_CLIENT_ID;
 
 const UNSPLASH_ROOT = "https://api.unsplash.com";
 

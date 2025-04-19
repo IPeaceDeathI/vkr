@@ -2,18 +2,35 @@
 
 namespace Noks\Profile\Controller;
 
-use Noks\Error\Errors;
+use Noks\Main\Error\Errors;
+use Noks\Main\BasicController;
+use Noks\_Trait\TempAddCSSAddJSForHeadFooter;
 
-class Logout
+Class Logout extends BasicController
 {
-    public function __invoke(): void
+    use TempAddCSSAddJSForHeadFooter;
+
+    function main ()
     {
-        try {
-            \session()->destroy();
-            \redirect(\getStartURL());
-        } catch (\Throwable $e) {
-            \_writeLog($e);
+        try
+        {
+            $this->process_main();
+        }
+        catch(\Throwable $e)
+        {
+            $this->log($this->CollectDataException($e));
             Errors::_500();
         }
+    }
+
+    private function process_main ()
+    {
+        // Удаляем куки
+        setcookie(SITE_LOGIN."_id", "", time() - 3600*24*30*12, "/");
+        setcookie(SITE_LOGIN."_hash", "", time() - 3600*24*30*12, "/",null,null,true); // httponly !!!
+        session_unset();
+        session_destroy();
+        // Переадресовываем браузер на страницу проверки нашего скрипта
+        redirect('/');
     }
 }
